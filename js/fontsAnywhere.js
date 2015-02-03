@@ -29,7 +29,7 @@ yFonts = ["Yanone Kaffeesatz","Yellowtail","Yeseva One","Yesteryear"];
 zFonts = ["Zeyada"];
 
 var chosen="";
-var blue="blue";
+var blue="#449D44";
 var white="white";
 if (document.getElementById("fontsAnywhere7921904"))
 {
@@ -147,7 +147,11 @@ function getNext(input,inc)
     fontInput.value = fontSet[pos+inc];
     changeFont(fontSet[pos+inc]);
     searchDict(fontInput.value[0]);
+    var fontCurrent = document.getElementById(fontInput.value);
+    fontCurrent.setAttribute("style","background-color:"+blue+"!important");
 
+
+    /* Scrolling logic */
     var dropDown= document.getElementById("dropDown");//get the new/current dropDown
     if (nextDropDown)//check if the letter went up, set to the bottom
     {
@@ -157,8 +161,6 @@ function getNext(input,inc)
     {
       dropDown.scrollTop=0;
     }
-    var fontCurrent = document.getElementById(fontInput.value);
-    fontCurrent.setAttribute("style","background-color:"+blue+"!important");
 
     fontPos = fontCurrent.getBoundingClientRect().top;
     var dropDownBottom=dropDown.getBoundingClientRect().top + dropDown.clientHeight;
@@ -227,8 +229,8 @@ function changeFont(input)
   link.rel="stylesheet";
   link.href = "http://fonts.googleapis.com/css?family="+input;
 
-  //document.getElementsByTagName("head")[0].appendChild(link);
-  //document.body.setAttribute("style","font-family:"+input+"!important");
+  document.getElementsByTagName("head")[0].appendChild(link);
+  document.body.setAttribute("style","font-family:"+input+"!important");
 
   var googleLink = "<link href='"+link.href+"' rel='stylesheet' type='text/css'>";
   document.getElementById("googleLink").value = googleLink;
