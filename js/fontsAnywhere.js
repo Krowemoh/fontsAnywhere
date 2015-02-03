@@ -74,6 +74,7 @@ function createFontsAnywhere()
     var letter=alpha[i];
     alphabet.innerHTML += "<div class='alphabetLetter' id='"+letter+"' onmouseout='changeColor(\""+letter+"\",0)' onmouseover='changeColor(\""+letter+"\",1)' onclick='setInput(\""+letter+"\")'>"+letter+"</div>";
   }
+
   searchDict();
 }
 
