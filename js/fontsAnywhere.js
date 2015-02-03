@@ -125,26 +125,53 @@ function randomFont()
 /* Gets the next font in the list when using the arrow keys */
 function getNext(input,inc)
 {
+  var nextDropDown;
   var fontSet = window[input[0].toLowerCase()+"Fonts"];
   var pos = fontSet.indexOf(input);
   if (pos>-1)
   {
-    if (pos+inc>=Object.keys(fontSet).length)
+    if (pos+inc>=Object.keys(fontSet).length)//go down a letter
     {
       fontSet = window[String.fromCharCode(input[0].charCodeAt(0)+1).toLowerCase()+"Fonts"];
       pos=-1;
+      nextDropDown=0;
     }
-    if (pos+inc<0)
+    if (pos+inc<0)//go up a letter
     {
       fontSet = window[String.fromCharCode(input[0].charCodeAt(0)-1).toLowerCase()+"Fonts"];
       pos=Object.keys(fontSet).length;
+      nextDropDown = 1;
     }
 
     var fontInput = document.getElementById("fontInput");
     fontInput.value = fontSet[pos+inc];
     changeFont(fontSet[pos+inc]);
     searchDict(fontInput.value[0]);
-    document.getElementById(fontInput.value).setAttribute("style","background-color:"+blue+"!important");
+
+    var dropDown= document.getElementById("dropDown");//get the new/current dropDown
+    if (nextDropDown)//check if the letter went up, set to the bottom
+    {
+      dropDown.scrollTop=dropDown.scrollHeight;
+    }
+    else if (nextDropDown==0)//letter went down, set to top
+    {
+      dropDown.scrollTop=0;
+    }
+    var fontCurrent = document.getElementById(fontInput.value);
+    fontCurrent.setAttribute("style","background-color:"+blue+"!important");
+
+    fontPos = fontCurrent.getBoundingClientRect().top;
+    var dropDownBottom=dropDown.getBoundingClientRect().top + dropDown.clientHeight;
+    var dropDownTop = dropDown.getBoundingClientRect().top;
+
+    if (fontPos>dropDownBottom-fontCurrent.clientHeight && inc ==1)
+    {
+      dropDown.scrollTop +=fontCurrent.clientHeight;
+    }
+    else if (fontPos<dropDownTop && inc == -1)
+    {
+      dropDown.scrollTop -=fontCurrent.clientHeight;
+    }
 
   }
 }
@@ -200,8 +227,8 @@ function changeFont(input)
   link.rel="stylesheet";
   link.href = "http://fonts.googleapis.com/css?family="+input;
 
-  document.getElementsByTagName("head")[0].appendChild(link);
-  document.body.setAttribute("style","font-family:"+input+"!important");
+  //document.getElementsByTagName("head")[0].appendChild(link);
+  //document.body.setAttribute("style","font-family:"+input+"!important");
 
   var googleLink = "<link href='"+link.href+"' rel='stylesheet' type='text/css'>";
   document.getElementById("googleLink").value = googleLink;
