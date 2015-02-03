@@ -1,0 +1,100 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 6, ../sass/screen.scss */
+#fontsAnywhere7921904 {
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 10px !important;
+  font-size: 16px !important;
+  font-family: serif !important;
+  z-index: 1000 !important;
+}
+
+/* line 15, ../sass/screen.scss */
+#fontsAnywhere {
+  background-color: white !important;
+  padding: 5px !important;
+  border: 5px solid #D6D6D6 !important;
+  border-radius: 10px !important;
+}
+
+/* line 22, ../sass/screen.scss */
+#closeFont {
+  display: inline-block !important;
+  font-size: 16px !important;
+  font-family: serif !important;
+}
+
+/* line 28, ../sass/screen.scss */
+#randomFont {
+  font-size: 16px !important;
+  font-family: serif !important;
+}
+
+/* line 33, ../sass/screen.scss */
+#googleLink {
+  display: inline-block !important;
+  width: 120px !important;
+  margin-right: 3px !important;
+  margin-bottom: 5px !important;
+  white-space: nowrap !important;
+  overflow-x: scroll !important;
+  overflow-y: hidden !important;
+  font-size: 12px !important;
+  font-family: "serif" !important;
+}
+
+/* line 45, ../sass/screen.scss */
+#fontFace {
+  display: inline-block !important;
+  width: 57px !important;
+  margin-right: 5px !important;
+  white-space: nowrap !important;
+  overflow-x: scroll !important;
+  overflow-y: hidden !important;
+  font-size: 12px !important;
+  font-family: serif !important;
+}
+
+/* line 56, ../sass/screen.scss */
+#fontInput {
+  width: 180px !important;
+  margin-right: 5px !important;
+  margin-bottom: 5px !important;
+  font-size: 16px !important;
+  font-family: serif !important;
+  text-align: center !important;
+}
+
+/* line 65, ../sass/screen.scss */
+#alphabet {
+  display: inline-block !important;
+  border-right: 1px solid black !important;
+}
+
+/* line 70, ../sass/screen.scss */
+.alphabetLetter {
+  cursor: pointer !important;
+  margin: 0 !important;
+  line-height: 1 !important;
+}
+
+/* line 76, ../sass/screen.scss */
+#dropDown {
+  display: inline-block !important;
+  width: 200px !important;
+  overflow-x: hidden !important;
+  overflow-y: scroll !important;
+  float: right !important;
+}
+
+/* line 84, ../sass/screen.scss */
+ul {
+  cursor: pointer !important;
+  margin: 0 !important;
+  padding: 0 0 0 5px !important;
+  text-align: left !important;
+  line-height: 1 !important;
+}

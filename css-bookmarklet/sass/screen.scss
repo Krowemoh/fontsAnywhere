@@ -1,0 +1,92 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+#fontsAnywhere7921904
+{
+  position:fixed!important;
+  bottom:0!important;
+  left:10px!important;
+  font-size:16px!important;
+  font-family:serif!important;
+  z-index:1000!important;
+}
+#fontsAnywhere
+{
+  background-color:white!important;
+  padding:5px!important;
+  border:5px solid #D6D6D6!important;
+  border-radius:10px!important;
+}
+#closeFont
+{
+  display:inline-block!important;
+  font-size:16px!important;
+  font-family:serif!important;
+}
+#randomFont
+{
+  font-size:16px!important;
+  font-family:serif!important;
+}
+#googleLink
+{
+  display:inline-block!important;
+  width:120px!important;
+  margin-right:3px!important;
+  margin-bottom:5px!important;
+  white-space:nowrap!important;
+  overflow-x:scroll!important;
+  overflow-y:hidden!important;
+  font-size:12px!important;
+  font-family:"serif"!important;
+}
+#fontFace
+{
+  display:inline-block!important;
+  width:57px!important;
+  margin-right:5px!important;
+  white-space:nowrap!important;
+  overflow-x:scroll!important;
+  overflow-y:hidden!important;
+  font-size:12px!important;
+  font-family:serif!important;
+}
+#fontInput
+{
+  width:180px!important;
+  margin-right:5px!important;
+  margin-bottom:5px!important;
+  font-size:16px!important;
+  font-family:serif!important;
+  text-align:center!important;
+}
+#alphabet
+{
+  display:inline-block!important;
+  border-right:1px solid black!important;
+}
+.alphabetLetter
+{
+  cursor:pointer!important;
+  margin:0!important;
+  line-height:1!important;
+}
+#dropDown
+{
+  display:inline-block!important;
+  width:200px!important;
+  overflow-x:hidden!important;
+  overflow-y:scroll!important;
+  float:right!important;
+}
+ul
+{
+  cursor:pointer!important;
+  margin:0!important;
+  padding:0 0 0 5px!important;
+  text-align:left!important;
+  line-height:1!important;
+}
+
