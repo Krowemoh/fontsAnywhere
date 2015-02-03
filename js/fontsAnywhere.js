@@ -213,7 +213,7 @@ function searchDict(input="")
     if (dict[i].toUpperCase().indexOf(input.toUpperCase()) > -1)
     {
       fontName= dict[i]
-      value += "<ul style='margin:0;cursor:pointer;padding:0 0 0 5px;line-height:1;' id='"+fontName+"' onmouseout='changeColor(\""+fontName+"\",0)' onmouseover='changeColor(\""+fontName+"\",1)' onclick='changeFont(\""+fontName+"\")'>"+fontName+"</ul>";
+      value += "<ul style='text-align:left;margin:0;cursor:pointer;padding:0 0 0 5px;line-height:1;' id='"+fontName+"' onmouseout='changeColor(\""+fontName+"\",0)' onmouseover='changeColor(\""+fontName+"\",1)' onclick='changeFont(\""+fontName+"\")'>"+fontName+"</ul>";
     }
   }
   var dropDown = document.getElementById("dropDown");
