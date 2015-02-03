@@ -75,7 +75,7 @@ function createFontsAnywhere()
     alphabet.innerHTML += "<div class='alphabetLetter' id='"+letter+"' onmouseout='changeColor(\""+letter+"\",0)' onmouseover='changeColor(\""+letter+"\",1)' onclick='setInput(\""+letter+"\")'>"+letter+"</div>";
   }
 
-  searchDict();
+  setTimeout(function(){searchDict();},0);
 }
 
 /* Get key events, specifically the enter key */
