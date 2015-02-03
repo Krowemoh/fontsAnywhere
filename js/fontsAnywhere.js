@@ -29,7 +29,7 @@ yFonts = ["Yanone Kaffeesatz","Yellowtail","Yeseva One","Yesteryear"];
 zFonts = ["Zeyada"];
 
 var chosen="";
-var blue="yellow";
+var blue="blue";
 var white="white";
 if (document.getElementById("fontsAnywhere7921904"))
 {
