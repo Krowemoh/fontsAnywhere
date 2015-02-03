@@ -153,7 +153,6 @@ function setInput(letter)
   document.getElementById("fontInput").value=letter;
   searchDict();
 }
-
 /* Searches the dictionary every time a key is release */
 function searchDict(input="")
 {
@@ -192,7 +191,6 @@ function changeColor(fontName,over)
     }
   }
 }
-
 /* Gets the google link and changes the font to the new font, only on the body selector */ 
 function changeFont(input)
 {
@@ -217,7 +215,6 @@ function changeFont(input)
     }
   }
   chosen=input;
-
 }
 
 
