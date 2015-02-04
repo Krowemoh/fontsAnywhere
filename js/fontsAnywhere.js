@@ -27,7 +27,7 @@ wFonts = ["Waiting for the Sunrise","Wallpoet","Walter Turncoat","Warnes","Wellf
 xFonts = [];
 yFonts = ["Yanone Kaffeesatz","Yellowtail","Yeseva One","Yesteryear"];
 zFonts = ["Zeyada"];
-
+alert();
 var chosen="";
 var blue="#337ab7";
 var white="white";
@@ -184,8 +184,9 @@ function setInput(letter)
   searchDict();
 }
 /* Searches the dictionary every time a key is release */
-function searchDict(input="")
+function searchDict(input)
 {
+  input = (typeof input ==="undefined") ? '':input;
   var value="";
   if (input=="")
   {
