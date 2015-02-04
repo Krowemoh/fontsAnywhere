@@ -52,7 +52,7 @@ function createFontsAnywhere()
   cleanslate.id="cleanSlate";
   document.head.appendChild(cleanslate);
 
- var mySheet = document.createElement("link");
+  var mySheet = document.createElement("link");
   mySheet.href="http://127.0.0.1/projects/fonts-anywhere/css-bookmarklet/stylesheets/screen.css";
   mySheet.type="text/css";
   mySheet.rel="stylesheet";
