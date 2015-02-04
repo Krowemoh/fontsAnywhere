@@ -1,0 +1,109 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 6, ../sass/screen.scss */
+#fontsAnywhere7921904 {
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 10px !important;
+  font-family: serif !important;
+  z-index: 1000 !important;
+}
+
+/* line 14, ../sass/screen.scss */
+#fontsAnywhere {
+  background-color: white !important;
+  padding: 7px !important;
+  border: 5px solid #D6D6D6 !important;
+  border-radius: 10px !important;
+}
+
+/* line 21, ../sass/screen.scss */
+#closeFont, #randomFont {
+  display: inline-block !important;
+  font-family: serif !important;
+  padding: 0px 5px 0px 10px !important;
+  cursor: pointer !important;
+}
+
+/* line 28, ../sass/screen.scss */
+#googleLink {
+  display: inline-block !important;
+  width: 110px !important;
+  padding: 3px 0px !important;
+  font-size: 12px !important;
+  font-family: "serif" !important;
+  border: 2px solid #D6D6D6 !important;
+  border-radius: 5px !important;
+  padding: 5px 3px !important;
+}
+
+/* line 39, ../sass/screen.scss */
+#fontFace {
+  display: inline-block !important;
+  width: 54px !important;
+  padding: 3px 0px !important;
+  margin-left: 3px !important;
+  font-size: 12px !important;
+  font-family: serif !important;
+  border: 2px solid #D6D6D6 !important;
+  border-radius: 5px !important;
+  padding: 5px 3px !important;
+}
+
+/* line 51, ../sass/screen.scss */
+#fontInput {
+  width: 180px !important;
+  margin-top: 5px !important;
+  margin-bottom: 7px !important;
+  padding: 5px 0px !important;
+  font-size: 18px;
+  font-family: serif !important;
+  text-align: center !important;
+  border: 2px solid #D6D6D6 !important;
+  border-radius: 5px !important;
+}
+
+/* line 63, ../sass/screen.scss */
+#fontInput:focus {
+  box-shadow: 0 0 5px #337ab7;
+}
+
+/* line 67, ../sass/screen.scss */
+#alphabet {
+  display: inline-block !important;
+  border-right: 1px solid black !important;
+}
+
+/* line 72, ../sass/screen.scss */
+div.alphabetLetter {
+  cursor: pointer !important;
+}
+
+/* line 76, ../sass/screen.scss */
+#dropDown {
+  display: inline-block !important;
+  width: 180px !important;
+  overflow-y: scroll !important;
+  float: right !important;
+  font-size: 14px !important;
+  margin-right: 5px !important;
+}
+
+/* line 85, ../sass/screen.scss */
+ul.fontList {
+  cursor: pointer !important;
+  padding: 2px 0px !important;
+}
+
+/* line 90, ../sass/screen.scss */
+#attrib {
+  padding-top: 7px !important;
+  font-size: 10px !important;
+}
+
+/* line 95, ../sass/screen.scss */
+#attrib a {
+  text-decoration: underline !important;
+}

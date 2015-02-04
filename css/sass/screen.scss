@@ -3,20 +3,90 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-body{background-image:url("../flowertrail.png");}
-h2{font-size:6em;letter-spacing:20px;}
-h2.mFont{margin-left:30px;}
-.navbar{background-color:black;border-radius:0px;}
-.navbar-brand{color:#B8B8B8;letter-spacing:7px;;}
-
-.mMasthead{padding-top:120px;padding-bottom:20px;}
-
-.mFont{font-family:'Niconne';}
-
-a.btn{margin-top:40px;padding:15px 25px;margin-bottom:20px;}
-div.row{padding-bottom:20px;}
-
-.mTop{border-top:1px solid black;padding-top:50px;}
-@media (max-width:1000px){h2{letter-spacing:5px;}}
-@media(max-width:500px){h2{letter-spacing:2px;}div.row{padding-bottom:0px;}}
-
+@import "compass/reset";
+$baseColor:#337ab7;
+$hoverColor:#23527c;
+html{font-family:'Open Sans';}
+body{background-image:url("../blu_stripes.png");}
+a{color:$baseColor;text-decoration:none;}
+a:visited{color:$baseColor;}
+a:hover{color:$hoverColor;text-decoration:underline}
+.sFont{font-family:'Niconne';}
+.navBar
+{
+  background-color:#333333;
+  width:auto;
+  padding:10px;
+}
+.nav
+{
+  display:inline-block;
+}
+.navRight
+{
+  float:right;
+}
+.content
+{
+  text-align:center;
+}
+.masthead
+{
+  display:inline-block;
+  padding:120px 0px 30px 0px;
+  text-align:center;
+  color:#333333;
+}
+h1
+{
+  font-size:6em;
+  letter-spacing:20px;
+}
+.tagLine
+{
+  font-size:1.3em;
+  padding:20px;
+}
+a .bookmarkletButton
+{
+  background-color:#337ab7;
+  display:inline-block;
+  padding:20px;
+  border-radius:5px;
+  color:white;
+  margin-top:30px;
+  font-size:18px;
+}
+a .bookmarkletButton:hover{background-color:#286090;}
+.tryMe{font-size:12px;padding-top:3px;}
+.words
+{
+  width:700px;
+  margin:0 auto;
+  padding:20px;
+  text-align:left;
+}
+.item
+{
+  padding:10px;
+}
+.subHeading
+{
+  font-size:18px;
+  font-weight:bold;
+  padding-bottom:10px;
+}
+.subText{font-size:14px;line-height:120%;}
+.first.item{border-top:1px solid black;padding-top:30px;}
+.last.item{border-bottom:1px solid black;padding-bottom:30px;}
+.attribution{font-size:13px;line-height:130%;}
+@media(max-width:800px)
+{
+  .nav{display:block;text-align:center;}
+  .navRight{float:none;margin-top:20px;}
+  .content{width:100%;margin:0 auto;}
+  .masthead{display:block;padding:50px 0px 30px 0px;}
+  h1{font-size:4em;letter-spacing:10px;}
+  .tagLine{font-size:1.2em;}
+  .words{width:90%;}
+}

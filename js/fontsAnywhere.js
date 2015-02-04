@@ -29,11 +29,13 @@ yFonts = ["Yanone Kaffeesatz","Yellowtail","Yeseva One","Yesteryear"];
 zFonts = ["Zeyada"];
 
 var chosen="";
-var blue="blue";
+var blue="#337ab7";
 var white="white";
 if (document.getElementById("fontsAnywhere7921904"))
 {
   document.getElementById("fontsAnywhere7921904").remove();
+  document.getElementById("cleanSlate").remove();
+  document.getElementById("mySheet").remove();
 }
 else
 {
@@ -42,83 +44,38 @@ else
 /* Create the input box*/
 function createFontsAnywhere()
 {
+
+  var cleanslate = document.createElement("link");
+  cleanslate.href="http://127.0.0.1/projects/fonts-anywhere/css/cleanslate.css";
+  cleanslate.type="text/css";
+  cleanslate.rel="stylesheet";
+  cleanslate.id="cleanSlate";
+  document.head.appendChild(cleanslate);
+
+ var mySheet = document.createElement("link");
+  mySheet.href="http://127.0.0.1/projects/fonts-anywhere/css-bookmarklet/stylesheets/screen.css";
+  mySheet.type="text/css";
+  mySheet.rel="stylesheet";
+  mySheet.id="mySheet";
+  document.head.appendChild(mySheet);
+
   var textBox = document.createElement("div");
   textBox.id='fontsAnywhere7921904';
+  textBox.className='cleanslate';
 
-  textBox.innerHTML="<div id='fontsAnywhere'><input id='googleLink' onclick='this.select()'><input id='fontFace' onclick='this.select()'><button id='closeFont' onclick='closeFont()'>x</button><br><input id='fontInput' type='text' onkeypress='getKey(event,1)' onkeyup='getKey(event,0)'><button id='randomFont' onclick='randomFont()'>*</button><div><div id='alphabet'></div><div id='dropDown'></di></div></div>";
-  textBox.style.position="fixed";
-  textBox.style.fontSize="16px";
-  textBox.style.fontFamily="serif";
-  textBox.style.bottom="0%";
-  textBox.style.left="10px";
+  textBox.innerHTML="<div id='fontsAnywhere'><input id='googleLink' onclick='this.select()'><input id='fontFace' onclick='this.select()'><div id='closeFont' onclick='closeFont()'>x</div><br><input id='fontInput' type='text' onkeypress='getKey(event,1)' onkeyup='getKey(event,0)'><div id='randomFont' onclick='randomFont()'>*</div><div><div id='alphabet'></div><div id='dropDown'></di></div><div id='attrib'><a href='http://www.projectfragments.com/projects/fontsAnywhere'>Fonts Anywhere</a> - powered by <a href='https://www.google.com/fonts'>Google</a></div></div>"
   document.body.appendChild(textBox);
 
-  var fontsAnywhere = document.getElementById("fontsAnywhere");
-  fontsAnywhere.style.backgroundColor=white;
-  fontsAnywhere.style.padding="5px";
-  fontsAnywhere.style.border="5px solid #D6D6D6";
-  fontsAnywhere.style.borderRadius="10px";
-
-  var closeFont = document.getElementById("closeFont");
-  closeFont.style.display="inline-block";
-
-  var googleLink = document.getElementById("googleLink");
-  googleLink.style.display="inline-block";
-  googleLink.style.fontFamily="serif";
-  googleLink.style.width="120px";
-  googleLink.style.fontSize="12px";
-  googleLink.style.marginRight="3px";
-
-  googleLink.style.marginBottom="5px";
-  googleLink.style.whiteSpace="nowrap";
-  googleLink.style.overflowX="scroll";
-  googleLink.style.overflowY="hidden";
-
-  var fontFace = document.getElementById("fontFace");
-  fontFace.style.display="inline-block";
-  fontFace.style.fontFamily="serif";
-  fontFace.style.width="57px";
-  fontFace.style.fontSize="12px";
-  fontFace.style.marginRight="5px";
-  fontFace.style.whiteSpace="nowrap";
-  fontFace.style.overflowX="scroll";
-  fontFace.style.overflowY="hidden";
-
-  var closeFont = document.getElementById("closeFont");
-  closeFont.style.fontFamily="serif";
-  closeFont.style.fontSize="16px";
-
-  var randomFont = document.getElementById("randomFont");
-  randomFont.style.fontFamily="serif";
-  randomFont.style.fontSize="16px";
-
-
-
   var fontInput = document.getElementById("fontInput");
-  fontInput.style.textAlign="center";
-  fontInput.style.fontFamily="serif";
-  fontInput.style.width="180px";
-  fontInput.style.marginRight="5px";
-  fontInput.style.marginBottom="5px";
   fontInput.value ="a";
-
-  var alphabet = document.getElementById("alphabet");
-  alphabet.style.display = "inline-block";
-  alphabet.style.borderRight = "1px solid black";
 
   for (i in alpha)
   {
     var letter=alpha[i];
-    alphabet.innerHTML += "<div id='"+letter+"'style='margin:0;cursor:pointer;line-height:1;' onmouseout='changeColor(\""+letter+"\",0)' onmouseover='changeColor(\""+letter+"\",1)' onclick='setInput(\""+letter+"\")'>"+letter+"</div>";
+    alphabet.innerHTML += "<div class='alphabetLetter' id='"+letter+"' onmouseout='changeColor(\""+letter+"\",0)' onmouseover='changeColor(\""+letter+"\",1)' onclick='setInput(\""+letter+"\")'>"+letter+"</div>";
   }
 
- var dropDown = document.getElementById("dropDown");
- dropDown.style.width="200px";
- dropDown.style.overflowX="hidden";
- dropDown.style.overflowY="scroll";
-
-
-  searchDict();
+  setTimeout(function(){searchDict();},100);
 }
 
 /* Get key events, specifically the enter key */
@@ -168,26 +125,55 @@ function randomFont()
 /* Gets the next font in the list when using the arrow keys */
 function getNext(input,inc)
 {
+  var nextDropDown;
   var fontSet = window[input[0].toLowerCase()+"Fonts"];
   var pos = fontSet.indexOf(input);
   if (pos>-1)
   {
-    if (pos+inc>=Object.keys(fontSet).length)
+    if (pos+inc>=Object.keys(fontSet).length)//go down a letter
     {
       fontSet = window[String.fromCharCode(input[0].charCodeAt(0)+1).toLowerCase()+"Fonts"];
       pos=-1;
+      nextDropDown=0;
     }
-    if (pos+inc<0)
+    if (pos+inc<0)//go up a letter
     {
       fontSet = window[String.fromCharCode(input[0].charCodeAt(0)-1).toLowerCase()+"Fonts"];
       pos=Object.keys(fontSet).length;
+      nextDropDown = 1;
     }
 
     var fontInput = document.getElementById("fontInput");
     fontInput.value = fontSet[pos+inc];
     changeFont(fontSet[pos+inc]);
     searchDict(fontInput.value[0]);
-    document.getElementById(fontInput.value).style.backgroundColor=blue;
+    var fontCurrent = document.getElementById(fontInput.value);
+    fontCurrent.setAttribute("style","background-color:"+blue+"!important");
+
+
+    /* Scrolling logic */
+    var dropDown= document.getElementById("dropDown");//get the new/current dropDown
+    if (nextDropDown)//check if the letter went up, set to the bottom
+    {
+      dropDown.scrollTop=dropDown.scrollHeight;
+    }
+    else if (nextDropDown==0)//letter went down, set to top
+    {
+      dropDown.scrollTop=0;
+    }
+
+    fontPos = fontCurrent.getBoundingClientRect().top;
+    var dropDownBottom=dropDown.getBoundingClientRect().top + dropDown.clientHeight;
+    var dropDownTop = dropDown.getBoundingClientRect().top;
+
+    if (fontPos>dropDownBottom-fontCurrent.clientHeight && inc ==1)
+    {
+      dropDown.scrollTop +=fontCurrent.clientHeight;
+    }
+    else if (fontPos<dropDownTop && inc == -1)
+    {
+      dropDown.scrollTop -=fontCurrent.clientHeight;
+    }
 
   }
 }
@@ -197,7 +183,6 @@ function setInput(letter)
   document.getElementById("fontInput").value=letter;
   searchDict();
 }
-
 /* Searches the dictionary every time a key is release */
 function searchDict(input="")
 {
@@ -213,17 +198,14 @@ function searchDict(input="")
     if (dict[i].toUpperCase().indexOf(input.toUpperCase()) > -1)
     {
       fontName= dict[i]
-      value += "<ul style='margin:0;cursor:pointer;padding:0 0 0 5px;line-height:1;' id='"+fontName+"' onmouseout='changeColor(\""+fontName+"\",0)' onmouseover='changeColor(\""+fontName+"\",1)' onclick='changeFont(\""+fontName+"\")'>"+fontName+"</ul>";
+      value += "<ul class='fontList' id='"+fontName+"' onmouseout='changeColor(\""+fontName+"\",0)' onmouseover='changeColor(\""+fontName+"\",1)' onclick='changeFont(\""+fontName+"\")'>"+fontName+"</ul>";
     }
   }
   var dropDown = document.getElementById("dropDown");
   dropDown.innerHTML = value;
-  dropDown.style.display="inline-block";
-  dropDown.style.float="right";
-  dropDown.style.height=document.getElementById("alphabet").clientHeight+"px";
-  }
-
-
+  height=document.getElementById("alphabet").clientHeight+"px";
+  dropDown.setAttribute("style","height:"+height+"!important");
+}
 /* Changes the color of background when a font is hovered over */
 function changeColor(fontName,over)
 {
@@ -231,15 +213,14 @@ function changeColor(fontName,over)
   {
     if (over)
     {
-      document.getElementById(fontName).style.backgroundColor=blue;
+      document.getElementById(fontName).setAttribute("style","background-color:"+blue+"!important");
     }
     else
     {
-      document.getElementById(fontName).style.backgroundColor=white;
+      document.getElementById(fontName).setAttribute("style","background-color:"+white+"!important");
     }
   }
 }
-
 /* Gets the google link and changes the font to the new font, only on the body selector */ 
 function changeFont(input)
 {
@@ -249,7 +230,7 @@ function changeFont(input)
   link.href = "http://fonts.googleapis.com/css?family="+input;
 
   document.getElementsByTagName("head")[0].appendChild(link);
-  document.body.style.fontFamily=input;
+  document.body.setAttribute("style","font-family:"+input+"!important");
 
   var googleLink = "<link href='"+link.href+"' rel='stylesheet' type='text/css'>";
   document.getElementById("googleLink").value = googleLink;
@@ -260,11 +241,10 @@ function changeFont(input)
   {
     if (document.getElementById(chosen))
     {
-      document.getElementById(chosen).style.backgroundColor=white;
+      document.getElementById(chosen).setAttribute("style","background-color:"+white+"!important");
     }
   }
   chosen=input;
-
 }
 
 
