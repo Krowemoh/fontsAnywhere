@@ -87,3 +87,14 @@ ul.fontList {
   cursor: pointer !important;
   padding: 2px 0px !important;
 }
+
+/* line 82, ../sass/screen.scss */
+#attrib {
+  padding-top: 7px !important;
+  font-size: 10px !important;
+}
+
+/* line 87, ../sass/screen.scss */
+#attrib a {
+  text-decoration: underline !important;
+}

@@ -2,77 +2,249 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 6, ../sass/screen.scss */
-body {
-  background-image: url("../flowertrail.png");
+/* line 5, ../../../../../../home/ice/.gem/ruby/2.2.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
 }
 
-/* line 7, ../sass/screen.scss */
-h2 {
+/* line 22, ../../../../../../home/ice/.gem/ruby/2.2.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../home/ice/.gem/ruby/2.2.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../home/ice/.gem/ruby/2.2.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../home/ice/.gem/ruby/2.2.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../home/ice/.gem/ruby/2.2.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../home/ice/.gem/ruby/2.2.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../home/ice/.gem/ruby/2.2.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../home/ice/.gem/ruby/2.2.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 9, ../sass/screen.scss */
+html {
+  font-family: 'Open Sans';
+}
+
+/* line 10, ../sass/screen.scss */
+body {
+  background-image: url("../blu_stripes.png");
+}
+
+/* line 11, ../sass/screen.scss */
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+/* line 12, ../sass/screen.scss */
+a:visited {
+  color: #337ab7;
+}
+
+/* line 13, ../sass/screen.scss */
+a:hover {
+  color: #23527c;
+  text-decoration: underline;
+}
+
+/* line 14, ../sass/screen.scss */
+.sFont {
+  font-family: 'Niconne';
+}
+
+/* line 15, ../sass/screen.scss */
+.navBar {
+  background-color: #333333;
+  width: auto;
+  padding: 10px;
+}
+
+/* line 21, ../sass/screen.scss */
+.nav {
+  display: inline-block;
+}
+
+/* line 25, ../sass/screen.scss */
+.navRight {
+  float: right;
+}
+
+/* line 29, ../sass/screen.scss */
+.content {
+  text-align: center;
+}
+
+/* line 33, ../sass/screen.scss */
+.masthead {
+  display: inline-block;
+  padding: 120px 0px 30px 0px;
+  text-align: center;
+  color: #333333;
+}
+
+/* line 40, ../sass/screen.scss */
+h1 {
   font-size: 6em;
   letter-spacing: 20px;
 }
 
-/* line 8, ../sass/screen.scss */
-h2.mFont {
-  margin-left: 30px;
+/* line 45, ../sass/screen.scss */
+.tagLine {
+  font-size: 1.3em;
+  padding: 20px;
 }
 
-/* line 9, ../sass/screen.scss */
-.navbar {
-  background-color: black;
-  border-radius: 0px;
+/* line 50, ../sass/screen.scss */
+a .bookmarkletButton {
+  background-color: #5cb85c;
+  display: inline-block;
+  padding: 20px;
+  border-radius: 5px;
+  color: white;
+  margin-top: 30px;
+  font-size: 18px;
 }
 
-/* line 10, ../sass/screen.scss */
-.navbar-brand {
-  color: #B8B8B8;
-  letter-spacing: 7px;
+/* line 60, ../sass/screen.scss */
+a .bookmarkletButton:hover {
+  background-color: #449d44;
 }
 
-/* line 12, ../sass/screen.scss */
-.mMasthead {
-  padding-top: 120px;
-  padding-bottom: 20px;
+/* line 61, ../sass/screen.scss */
+.tryMe {
+  font-size: 12px;
+  padding-top: 3px;
 }
 
-/* line 14, ../sass/screen.scss */
-.mFont {
-  font-family: 'Niconne';
+/* line 62, ../sass/screen.scss */
+.words {
+  width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
 }
 
-/* line 16, ../sass/screen.scss */
-a.btn {
-  margin-top: 40px;
-  padding: 15px 25px;
-  margin-bottom: 20px;
+/* line 69, ../sass/screen.scss */
+.item {
+  padding: 10px;
 }
 
-/* line 17, ../sass/screen.scss */
-div.row {
-  padding-bottom: 20px;
+/* line 73, ../sass/screen.scss */
+.subHeading {
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 10px;
 }
 
-/* line 19, ../sass/screen.scss */
-.mTop {
+/* line 79, ../sass/screen.scss */
+.subText {
+  font-size: 14px;
+  line-height: 120%;
+}
+
+/* line 80, ../sass/screen.scss */
+.first.item {
   border-top: 1px solid black;
-  padding-top: 50px;
+  padding-top: 30px;
 }
 
-@media (max-width: 1000px) {
-  /* line 20, ../sass/screen.scss */
-  h2 {
-    letter-spacing: 5px;
-  }
+/* line 81, ../sass/screen.scss */
+.last.item {
+  border-bottom: 1px solid black;
+  padding-bottom: 30px;
 }
-@media (max-width: 500px) {
-  /* line 21, ../sass/screen.scss */
-  h2 {
-    letter-spacing: 2px;
+
+/* line 82, ../sass/screen.scss */
+.attribution {
+  font-size: 13px;
+  line-height: 130%;
+}
+
+@media (max-width: 800px) {
+  /* line 85, ../sass/screen.scss */
+  .nav {
+    display: block;
+    text-align: center;
   }
 
-  /* line 21, ../sass/screen.scss */
-  div.row {
-    padding-bottom: 0px;
+  /* line 86, ../sass/screen.scss */
+  .navRight {
+    float: none;
+    margin-top: 20px;
+  }
+
+  /* line 87, ../sass/screen.scss */
+  .content {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* line 88, ../sass/screen.scss */
+  .masthead {
+    display: block;
+    padding: 50px 0px 30px 0px;
+  }
+
+  /* line 89, ../sass/screen.scss */
+  h1 {
+    font-size: 4em;
+    letter-spacing: 10px;
+  }
+
+  /* line 90, ../sass/screen.scss */
+  .tagLine {
+    font-size: 1.2em;
+  }
+
+  /* line 91, ../sass/screen.scss */
+  .words {
+    width: 90%;
   }
 }
