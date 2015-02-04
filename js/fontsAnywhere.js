@@ -27,7 +27,7 @@ wFonts = ["Waiting for the Sunrise","Wallpoet","Walter Turncoat","Warnes","Wellf
 xFonts = [];
 yFonts = ["Yanone Kaffeesatz","Yellowtail","Yeseva One","Yesteryear"];
 zFonts = ["Zeyada"];
-alert();
+
 var chosen="";
 var blue="#337ab7";
 var white="white";
@@ -63,7 +63,7 @@ function createFontsAnywhere()
   textBox.id='fontsAnywhere7921904';
   textBox.className='cleanslate';
 
-  textBox.innerHTML="<div id='fontsAnywhere'><input id='googleLink' onclick='this.select()'><input id='fontFace' onclick='this.select()'><div id='closeFont' onclick='closeFont()'>x</div><br><input id='fontInput' type='text' onkeypress='getKey(event,1)' onkeyup='getKey(event,0)'><div id='randomFont' onclick='randomFont()'>*</div><div><div id='alphabet'></div><div id='dropDown'></di></div><div id='attrib'><a href='http://www.projectfragments.com/projects/fontsAnywhere'>Fonts Anywhere</a> - powered by <a href='https://www.google.com/fonts'>Google</a></div></div>"
+  textBox.innerHTML="<div id='fontsAnywhere'><input id='googleLink' onclick='this.select()'><input id='fontFace' onclick='this.select()'><div id='closeFont' onclick='closeFont()'>x</div><br><input id='fontInput' type='text' onkeydown='getKey(event,1)' onkeyup='getKey(event,0)'><div id='randomFont' onclick='randomFont()'>*</div><div><div id='alphabet'></div><div id='dropDown'></di></div><div id='attrib'><a href='http://www.projectfragments.com/projects/fontsAnywhere'>Fonts Anywhere</a> - powered by <a href='https://www.google.com/fonts'>Google</a></div></div>"
   document.body.appendChild(textBox);
 
   var fontInput = document.getElementById("fontInput");
