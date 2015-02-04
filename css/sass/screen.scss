@@ -3,21 +3,49 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
+@import "compass/reset";
 body{background-image:url("../flowertrail.png");}
-h2{font-size:6em;letter-spacing:20px;}
-h2.mFont{margin-left:30px;}
-.navbar{background-color:black;border-radius:0px;}
-.navbar-brand{color:#B8B8B8;letter-spacing:7px;;}
-
-
-.mMasthead{padding-top:120px;padding-bottom:20px;}
-
-.mFont{font-family:'Niconne';}
-
-a.btn{margin-top:40px;padding:15px 25px;margin-bottom:20px;}
-div.row{padding-bottom:20px;}
-
-.mTop{border-top:1px solid black;padding-top:50px;}
-@media (max-width:1000px){h2{letter-spacing:5px;}}
-@media(max-width:500px){h2{letter-spacing:2px;}div.row{padding-bottom:0px;}}
-
+a{color:white;text-decoration:none;}
+a:visited{color:white;}
+a:hover{color:white;}
+.navBar
+{
+  background-color:black;
+  width:auto;
+  padding:10px;
+}
+.nav
+{
+  display:inline-block;
+}
+.navRight
+{
+  float:right;
+}
+.content
+{
+  width:100%;
+  margin:0 auto;
+}
+.masthead
+{
+  width:auto;
+  margin:0 auto;
+  padding:100px 0px 50px 0px;
+  text-align:center;
+  font-family:'Niconne';
+}
+h1
+{
+  font-size:6em;
+  letter-spacing:15px;
+}
+.tagLine
+{
+  font-size:1.75em;
+}
+@media(max-width:500px)
+{
+  .nav{display:block;text-align:center;}
+  .navRight{float:none;margin-top:20px;}
+}
