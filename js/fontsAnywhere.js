@@ -63,7 +63,7 @@ function createFontsAnywhere()
   textBox.id='fontsAnywhere7921904';
   textBox.className='cleanslate';
 
-  textBox.innerHTML="<div id='fontsAnywhere'><input id='googleLink' onclick='this.select()'><input id='fontFace' onclick='this.select()'><div id='closeFont' onclick='closeFont()'>x</div><br><input id='fontInput' type='text' onkeypress='getKey(event,1)' onkeyup='getKey(event,0)'><div id='randomFont' onclick='randomFont()'>*</div><div><div id='alphabet'></div><div id='dropDown'></di></div></div>"
+  textBox.innerHTML="<div id='fontsAnywhere'><input id='googleLink' onclick='this.select()'><input id='fontFace' onclick='this.select()'><div id='closeFont' onclick='closeFont()'>x</div><br><input id='fontInput' type='text' onkeypress='getKey(event,1)' onkeyup='getKey(event,0)'><div id='randomFont' onclick='randomFont()'>*</div><div><div id='alphabet'></div><div id='dropDown'></di></div><div id='attrib'><a href=''>Fonts Anywhere</a> - powered by <a href='https://www.google.com/fonts'>Google</a></div></div>"
   document.body.appendChild(textBox);
 
   var fontInput = document.getElementById("fontInput");
