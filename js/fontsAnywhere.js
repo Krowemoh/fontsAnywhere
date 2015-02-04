@@ -184,8 +184,9 @@ function setInput(letter)
   searchDict();
 }
 /* Searches the dictionary every time a key is release */
-function searchDict(input="")
+function searchDict(input)
 {
+  input = (typeof input ==="undefined")? '':input;
   var value="";
   if (input=="")
   {
