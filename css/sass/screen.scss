@@ -4,11 +4,12 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
-$baseColor:white;
+$baseColor:#337ab7;
+$hoverColor:#23527c;
 body{background-image:url("../blu_stripes.png");}
 a{color:$baseColor;text-decoration:none;}
 a:visited{color:$baseColor;}
-a:hover{color:$baseColor;}
+a:hover{color:$hoverColor;text-decoration:underline}
 .sFont{font-family:'Niconne';}
 .navBar
 {
@@ -44,11 +45,6 @@ h1
 {
   font-size:1.3em;
   padding:20px;
-}
-.tagLine a:hover
-{
-  color:#23527C;
-  text-decoration:underline;
 }
 a .bookmarkletButton
 {
