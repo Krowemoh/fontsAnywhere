@@ -32,7 +32,8 @@
   padding:3px 0px !important;
   font-size:12px!important;
   font-family:"serif"!important;
-  border:1px solid black !important;
+  border:2px solid #D6D6D6 !important;
+  border-radius:5px!important;
   padding:5px 3px!important;
 }
 #fontFace
@@ -43,23 +44,25 @@
   margin-left:3px!important;
   font-size:12px!important;
   font-family:serif!important;
-  border:1px solid black !important;
+  border:2px solid #D6D6D6 !important;
+  border-radius:5px!important;
   padding:5px 3px!important;
 }
 #fontInput
 {
   width:180px!important;
   margin-top:5px!important;
-  margin-bottom:5px!important;
+  margin-bottom:7px!important;
   padding:5px 0px!important;
   font-size:18px;
   font-family:serif!important;
   text-align:center!important;
-  border:1px solid black !important;
+  border:2px solid #D6D6D6 !important;
+  border-radius:5px!important;
 }
 #fontInput:focus
 {
-  box-shadow:0 0 8px rgba(51,122,183,1);
+  box-shadow:0 0 5px rgba(51,122,183,1);
 }
 #alphabet
 {
