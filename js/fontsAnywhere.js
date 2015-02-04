@@ -46,14 +46,14 @@ function createFontsAnywhere()
 {
 
   var cleanslate = document.createElement("link");
-  cleanslate.href="https://raw.githubusercontent.com/Working123/fontsAnywhere/master/css/cleanslate.css";
+  cleanslate.href="http://www.projectfragments.com/projects/fontsAnywhere/css/cleanslate.css";
   cleanslate.type="text/css";
   cleanslate.rel="stylesheet";
   cleanslate.id="cleanSlate";
   document.head.appendChild(cleanslate);
 
  var mySheet = document.createElement("link");
-  mySheet.href="https://raw.githubusercontent.com/Working123/fontsAnywhere/master/css-bookmarklet/stylesheets/screen.css";
+  mySheet.href="http://www.projectfragments.com/projects/fontsAnywhere/css-bookmarklet/stylesheets/screen.css";
   mySheet.type="text/css";
   mySheet.rel="stylesheet";
   mySheet.id="mySheet";
