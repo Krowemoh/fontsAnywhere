@@ -5,14 +5,14 @@
 
 @import "compass/reset";
 $baseColor:white;
-body{background-image:url("../flowertrail.png");}
+body{background-image:url("../blu_stripes.png");}
 a{color:$baseColor;text-decoration:none;}
 a:visited{color:$baseColor;}
 a:hover{color:$baseColor;}
 .sFont{font-family:'Niconne';}
 .navBar
 {
-  background-color:black;
+  background-color:#333333;
   width:auto;
   padding:10px;
 }
@@ -62,11 +62,11 @@ a .bookmarkletButton
 .tryMe{font-size:12px;padding-top:3px;}
 .words
 {
-  border-top:1px solid #333333;
   width:700px;
   margin:0 auto;
   padding:20px;
   text-align:left;
+  font-family:'Open Sans';
 }
 .item
 {
@@ -78,6 +78,10 @@ a .bookmarkletButton
   font-weight:bold;
   padding-bottom:10px;
 }
+.subText{font-size:14px;}
+.first.item{border-top:1px solid black;padding-top:30px;}
+.last.item{border-bottom:1px solid black;padding-bottom:30px;}
+.attribution{font-size:13px;line-height:130%;}
 @media(max-width:800px)
 {
   .nav{display:block;text-align:center;}
@@ -86,5 +90,5 @@ a .bookmarkletButton
   .masthead{display:block;}
   h1{font-size:4em;letter-spacing:10px;}
   .tagLine{font-size:1.2em;}
-  .words{width:100%;}
+  .words{width:90%;}
 }
