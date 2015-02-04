@@ -4,10 +4,12 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+$baseColor:white;
 body{background-image:url("../flowertrail.png");}
-a{color:white;text-decoration:none;}
-a:visited{color:white;}
-a:hover{color:white;}
+a{color:$baseColor;text-decoration:none;}
+a:visited{color:$baseColor;}
+a:hover{color:$baseColor;}
+.sFont{font-family:'Niconne';}
 .navBar
 {
   background-color:black;
@@ -24,29 +26,44 @@ a:hover{color:white;}
 }
 .content
 {
-  width:100%;
-  margin:0 auto;
+  text-align:center;
 }
 .masthead
 {
-  width:auto;
-  margin:0 auto;
+  display:inline-block;
   padding:120px 0px 50px 0px;
   text-align:center;
   color:#333333;
-  font-family:'Niconne';
+  border-bottom:1px solid #333333;
 }
 h1
 {
-  font-size:6em;
+  font-size:5em;
   letter-spacing:15px;
 }
 .tagLine
 {
   font-size:1.41em;
+  padding:20px;
+}
+.tagLine a:hover
+{
+  color:#23527C;
+  text-decoration:underline;
+}
+a .bookmarkletButton
+{
+  background-color:#449D44;
+  display:inline-block;
+  padding:20px;
+  border-radius:5px;
+  color:white;
+  margin-top:30px;
 }
 @media(max-width:500px)
 {
   .nav{display:block;text-align:center;}
   .navRight{float:none;margin-top:20px;}
+  h1{font-size:5em;letter-spacing:10px;}
+  .tagLine{font-size:1.2em;}
 }
