@@ -143,7 +143,7 @@ h1 {
 
 /* line 50, ../sass/screen.scss */
 a .bookmarkletButton {
-  background-color: #5cb85c;
+  background-color: #337ab7;
   display: inline-block;
   padding: 20px;
   border-radius: 5px;
@@ -154,7 +154,7 @@ a .bookmarkletButton {
 
 /* line 60, ../sass/screen.scss */
 a .bookmarkletButton:hover {
-  background-color: #449d44;
+  background-color: #286090;
 }
 
 /* line 61, ../sass/screen.scss */
