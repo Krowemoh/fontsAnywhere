@@ -28,6 +28,11 @@
 }
 
 /* line 28, ../sass/screen.scss */
+#closeFont:hover, #randomFont:hover {
+  color: #337ab7 !important;
+}
+
+/* line 32, ../sass/screen.scss */
 #googleLink {
   display: inline-block !important;
   width: 110px !important;
@@ -39,7 +44,7 @@
   padding: 5px 3px !important;
 }
 
-/* line 39, ../sass/screen.scss */
+/* line 43, ../sass/screen.scss */
 #fontFace {
   display: inline-block !important;
   width: 54px !important;
@@ -52,7 +57,7 @@
   padding: 5px 3px !important;
 }
 
-/* line 51, ../sass/screen.scss */
+/* line 55, ../sass/screen.scss */
 #fontInput {
   width: 180px !important;
   margin-top: 5px !important;
@@ -65,23 +70,23 @@
   border-radius: 5px !important;
 }
 
-/* line 63, ../sass/screen.scss */
+/* line 67, ../sass/screen.scss */
 #fontInput:focus {
   box-shadow: 0 0 5px #337ab7;
 }
 
-/* line 67, ../sass/screen.scss */
+/* line 71, ../sass/screen.scss */
 #alphabet {
   display: inline-block !important;
   border-right: 1px solid black !important;
 }
 
-/* line 72, ../sass/screen.scss */
+/* line 76, ../sass/screen.scss */
 div.alphabetLetter {
   cursor: pointer !important;
 }
 
-/* line 76, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
 #dropDown {
   display: inline-block !important;
   width: 180px !important;
@@ -91,19 +96,19 @@ div.alphabetLetter {
   margin-right: 5px !important;
 }
 
-/* line 85, ../sass/screen.scss */
+/* line 89, ../sass/screen.scss */
 ul.fontList {
   cursor: pointer !important;
   padding: 2px 0px !important;
 }
 
-/* line 90, ../sass/screen.scss */
+/* line 94, ../sass/screen.scss */
 #attrib {
   padding-top: 7px !important;
   font-size: 10px !important;
 }
 
-/* line 95, ../sass/screen.scss */
+/* line 99, ../sass/screen.scss */
 #attrib a {
   text-decoration: underline !important;
 }
