@@ -116,11 +116,16 @@ function randomRange(min,max)
 }
 function randomFont()
 {
-  var rLetter = String.fromCharCode(randomRange(97,122))+"Fonts";
-  var font = randomRange(0,Object.keys(window[rLetter]).length)
-  var input = window[rLetter][font];
-  changeFont(input);
-  searchDict();
+  var input;
+  while (typeof input === "undefined")
+  {
+    var rLetter = String.fromCharCode(randomRange(97,122))+"Fonts";
+    var font = randomRange(0,Object.keys(window[rLetter]).length)
+    input = window[rLetter][font];
+  }
+    changeFont(input);
+    searchDict();
+
 }
 /* Gets the next font in the list when using the arrow keys */
 function getNext(input,inc)
