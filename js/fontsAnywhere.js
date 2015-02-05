@@ -116,9 +116,13 @@ function randomRange(min,max)
 }
 function randomFont()
 {
-  var rLetter = String.fromCharCode(randomRange(97,122))+"Fonts";
-  var font = randomRange(0,Object.keys(window[rLetter]).length)
-  var input = window[rLetter][font];
+  var input;
+  while(typeof input ==="undefined")
+  {
+    var rLetter = String.fromCharCode(randomRange(97,122))+"Fonts";
+    var font = randomRange(0,Object.keys(window[rLetter]).length)
+    input = window[rLetter][font];
+  }
   changeFont(input);
   searchDict();
 }
