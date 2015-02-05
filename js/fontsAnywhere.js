@@ -141,6 +141,7 @@ function getNext(input,inc)
       fontSet = window[String.fromCharCode(input[0].charCodeAt(0)+1).toLowerCase()+"Fonts"];
       while(Object.keys(fontSet).length ==0)
       {
+        input = String.fromCharCode(input[0].charCodeAt()+1);
         fontSet = window[String.fromCharCode(input[0].charCodeAt(0)+1).toLowerCase()+"Fonts"];
       }
       pos=-1;
@@ -149,6 +150,11 @@ function getNext(input,inc)
     if (pos+inc<0)//go up a letter
     {
       fontSet = window[String.fromCharCode(input[0].charCodeAt(0)-1).toLowerCase()+"Fonts"];
+      while(Object.keys(fontSet).length ==0)
+      {
+        input = String.fromCharCode(input[0].charCodeAt()-1);
+        fontSet = window[String.fromCharCode(input[0].charCodeAt(0)-1).toLowerCase()+"Fonts"];
+      }
       pos=Object.keys(fontSet).length;
       nextDropDown = 1;
     }
