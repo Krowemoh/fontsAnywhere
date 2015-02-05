@@ -133,11 +133,16 @@ function getNext(input,inc)
   var nextDropDown;
   var fontSet = window[input[0].toLowerCase()+"Fonts"];
   var pos = fontSet.indexOf(input);
+
   if (pos>-1)
   {
     if (pos+inc>=Object.keys(fontSet).length)//go down a letter
     {
       fontSet = window[String.fromCharCode(input[0].charCodeAt(0)+1).toLowerCase()+"Fonts"];
+      while(Object.keys(fontSet).length ==0)
+      {
+        fontSet = window[String.fromCharCode(input[0].charCodeAt(0)+1).toLowerCase()+"Fonts"];
+      }
       pos=-1;
       nextDropDown=0;
     }
